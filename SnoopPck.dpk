@@ -1,0 +1,42 @@
+package SnoopPck;
+
+{$R *.res}
+{$R 'Snoop.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl;
+
+contains
+  Pcap in 'Pcap.pas',
+  bpf in 'Bpf.pas',
+  IpTypes in 'IpTypes.pas',
+  IpHlpApi in 'IpHlpApi.pas',
+  IpIfConst in 'IpIfConst.pas',
+  IpRtrMib in 'IpRtrMib.pas',
+  IpExport in 'IpExport.pas',
+  Snoop in 'Snoop.pas',
+  SnoopTrace in 'SnoopTrace.pas';
+
+end.
